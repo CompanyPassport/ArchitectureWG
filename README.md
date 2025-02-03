@@ -5,7 +5,7 @@
 <h1 align="center"><b>Company Passport</b></h1>
 
 > [!TIP]
-> For a live version of this documentation, see [https://fidescommunity.github.io/CompanyPassport](https://fidescommunity.github.io/CompanyPassport)\*\*
+> For a live version of this documentation, see [[https://fidescommunity.github.io/CompanyPassport](https://fidescommunity.github.io/CompanyPasspo](https://companypassport.github.io/ArchitectureWG/)\*\*
 
 This repository contains the source code of the documentation for the Company Passport project.
 
