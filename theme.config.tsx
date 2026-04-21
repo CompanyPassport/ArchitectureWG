@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 const basePath = "/ArchitectureWG";
 
 const config: DocsThemeConfig = {
-  logo: () => <Logo />,
+  logo: => <Logo />,
   footer: {
     component: <Footer />,
   },
