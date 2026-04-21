@@ -8,7 +8,8 @@ const withNextra = require('nextra')({
 /** @type {import('next').NextConfig} */
 module.exports = {
   ...withNextra(),
-  basePath: '/CompanyPassport',
+  basePath: '/ArchitectureWG',
+  assetPrefix: '/ArchitectureWG/',
   output: 'export',
   images: {
     unoptimized: true,
