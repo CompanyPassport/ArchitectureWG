@@ -9,7 +9,7 @@ const config: DocsThemeConfig = {
 		component: <Footer />,
 	},
 	docsRepositoryBase:
-		"https://github.com/DutchBlockchainCoalition/CompanyPassport",
+		"https://github.com/CompanyPassport/ArchitectureWG/",
 	darkMode: false,
 	nextThemes: {
 		forcedTheme: 'light',
