@@ -1,13 +1,18 @@
 import Image from "next/image";
 
 export function Logo() {
-	return (
-		<Image
-			height={48}
-			width={48}
-			src="/logo.png"
-			alt="Company passport logo"
-			priority
-		/>
-	);
+  return (
+    <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+      <Image
+        src="/logo.png"
+        alt="Company Passport logo"
+        width={32}
+        height={32}
+        priority
+      />
+      <span style={{ fontWeight: 600, fontSize: "16px" }}>
+        Company Passport
+      </span>
+    </div>
+  );
 }
