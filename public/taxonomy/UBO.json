@@ -1,0 +1,90 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2#",
+    "http://ontology.companypassport.nl/cp#"
+  ],
+  "id": "urn:uuid:12345678-1234-1234-1234-123456789012",
+  "type": [
+    "VerifiableCredential",
+    "UBOCredential"
+  ],
+  "issuer": {
+    "@id": "did:kvk:67890",
+    "name": "Kamer van Koophandel Nederland"
+  },
+  "issuanceDate": "2025-04-03T12:00:00Z",
+  "credentialSubject": {
+    "id": "did:example:1234abcd",
+    "legalFormType": "Besloten Vennootschap (B.V.)",
+    "identifier": {
+      "legalPersonName": "CoPa BV",
+      "EUID": "NLNHR.67435955"
+    },
+    "intermediateOrganization": [
+      {
+        "identifier": {
+          "legalPersonName": "COPA-1"
+        },
+        "UBODetails": {
+          "percentageOwnershipUBO": "22"
+        },
+        "intermediateOrganization": [
+          {
+            "identifier": {
+              "legalPersonName": "Copa Roffa"
+            },
+            "UBODetails": {
+              "percentageOwnershipUBO": "100"
+            },
+            "legalRepresentative": [
+              {
+                "firstName": "Henk",
+                "familyName": "de Vries",
+                "UBODetails": {
+                  "percentageOwnershipUBO": "100"
+                },
+                "occupation": "uitsluitend enig aandeelhouder"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "identifier": {
+          "legalPersonName": "COPA & Zn"
+        },
+        "UBODetails": {
+          "percentageOwnershipUBO": "33"
+        },
+        "legalRepresentative": [
+          {
+            "firstName": "Pacootje jr",
+            "familyName": "de Vries",
+            "UBODetails": {
+              "percentageOwnershipUBO": "48"
+            },
+            "occupation": "aandeelhouder"
+          },
+          {
+            "firstName": "Paco",
+            "familyName": "de Vries",
+            "UBODetails": {
+              "percentageOwnershipUBO": "52"
+            },
+            "occupation": "aandeelhouder"
+          }
+        ]
+      }
+    ],
+    "legalRepresentative": [
+      {
+        "firstName": "Paco",
+        "familyName": "de Vries",
+        "UBODetails": {
+          "percentageOwnershipUBO": "45"
+        },
+        "occupation": "aandeelhouder"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2#",
+    "http://ontology.companypassport.nl/cp#"
+  ],
+  "id": "urn:uuid:12345678-1234-1234-1234-123456789012",
+  "type": [
+    "VerifiableCredential",
+    "LegalPersonCredential"
+  ],
+  "issuer": {
+    "id": "did:kvk:67890",
+    "name": "Kamer van Koophandel Nederland"
+  },
+  "issuanceDate": "2025-03-24T12:00:00Z",
+  "credentialSubject": {
+    "id": "did:example:1234abcd",
+    "cp:identifier": {
+      "legalPersonName": "CoPa BV",
+      "EUID": "NLNHR.67435955"
+    },
+    "legalFormType": "Besloten Vennootschap (B.V.)",
+    "intermediateOrganization": [
+      {
+        "legalFormType": "Besloten Vennootschap (B.V.)",
+        "identifier": {
+          "legalPersonName": "IntermediateCoPa-1"
+        },
+        "UBODetails": {
+          "percentageOwnershipUBO": "30"
+        },
+        "legalRepresentative": [
+          {
+            "firstName": "Paco",
+            "familyName": "de Vries",
+            "occupation": "uitvoerend bestuurder"
+          }
+        ]
+      },
+      {
+        "legalFormType": "Besloten Vennootschap (B.V.)",
+        "identifier": {
+          "legalPersonName": "Copa &Zn"
+        },
+        "UBODetails": {
+          "percentageOwnershipUBO": "70"
+        },
+        "legalRepresentative": [
+          {
+            "firstName": "Pacootje jr.",
+            "familyName": "de Vries",
+            "occupation": "uitvoerend bestuurder"
+          }
+        ]
+      }
+    ],
+    "legalRepresentative": [
+      {
+        "firstName": "Paco sr",
+        "familyName": "de Vries",
+        "dateOfBirth": "1961-10-15",
+        "role": "Statutair bestuurder",
+        "occupation": "uitvoerend bestuurder",
+        "homeLocation": {
+          "streetName": "Lanseloetstraat",
+          "houseNumber": "12",
+          "postalCode": "1234 AB",
+          "city": "Amsterdam",
+          "country": "Nederland"
+        }
+      },
+      {
+        "firstName": "Paco Bello sr",
+        "familyName": "de Vries",
+        "dateOfBirth": "1950-08-14",
+        "role": "Statutair bestuurder",
+        "occupation": "uitvoerend bestuurder",
+        "homeLocation": {
+          "streetName": "Lange nieuwstraat",
+          "houseNumber": "12",
+          "postalCode": "1234 AB",
+          "city": "Utrecht",
+          "country": "Nederland"
+        }
+      }
+    ]
+  }
+}
