@@ -1,0 +1,593 @@
+@prefix :          <http://ontology.companypassport.nl/> .
+@prefix BINK:      <http://www.braindex.nl/data/BINK#> .
+@prefix CPDA:      <https://kvk.nl/CP/CP_data-atlas#> .
+@prefix PMR:       <http://www.braindex.nl/data/PRIMER#> .
+@prefix acl:       <https://graphifi.com/schema/accesscontrol/> .
+@prefix amm:       <http://modellenbibliotheek.belastingdienst.nl/def/amm#> .
+@prefix b:         <https://kvk.nl/CP/CP_data-atlas/a#> .
+@prefix bag:       <http://bag.basisregistraties.overheid.nl/id/begrip/> .
+@prefix begrippen: <http://begrippen.notarieel.nl/id/concept/> .
+@prefix bel:       <http://bel.zorgeloosvastgoed.nl/id/concept/> .
+@prefix belasting: <http://begrippen.belastingdienst.nl/id/concept/> .
+@prefix cp:        <http://ontology.companypassport.nl/cp#> .
+@prefix cpKnb:     <https://companypassport.nl/knb.nl/ontology/v1> .
+@prefix dc:        <http://purl.org/dc/elements/1.1/> .
+@prefix dct:       <http://purl.org/dc/terms/> .
+@prefix dcterms:   <http://purl.org/dc/terms/> .
+@prefix dme:       <https://grafsync.graphifi.com/schema/dm-entitlement/> .
+@prefix ent:       <https://graphifi.com/schema/entitlement/> .
+@prefix fin:       <http://fin.zorgeloosvastgoed.nl/id/concept/> .
+@prefix grddl:     <http://www.w3.org/2003/g/data-view#> .
+@prefix gs:        <https://grafsync.graphifi.com/schema/gs/> .
+@prefix isothes:   <http://purl.org/iso25964/skos-thes#> .
+@prefix kad:       <http://kad.zorgeloosvastgoed.nl/id/concept/> .
+@prefix kvk:       <https://kvk.nl/CP/CP_data-atlas#> .
+@prefix loc:       <http://www.w3.org/ns/locn#> .
+@prefix mak:       <http://mak.zorgeloosvastgoed.nl/id/concept/> .
+@prefix not:       <http://not.zorgeloosvastgoed.nl/id/concept/> .
+@prefix ns0:       <http://bp4mc2.org/def/skos-lex#> .
+@prefix ome:       <https://grafsync.graphifi.com/schema/om-entitlement/> .
+@prefix org:       <http://www.w3.org/ns/org#> .
+@prefix owl:       <http://www.w3.org/2002/07/owl#> .
+@prefix person:    <http://www.w3.org/ns/person#> .
+@prefix rdf:       <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:      <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:    <https://schema.org/> .
+@prefix scp:       <https://graphifi.com/schema/scope/> .
+@prefix sh:        <http://www.w3.org/ns/shacl#> .
+@prefix skos:      <http://www.w3.org/2004/02/skos/core#> .
+@prefix skoslex:   <http://bp4mc2.org/def/skos-lex#> .
+@prefix skosthes:  <http://purl.org/iso25964/skos-thes#> .
+@prefix skosxl:    <http://www.w3.org/2008/05/skos-xl#> .
+@prefix taxonomie: <http://taxonomie.companypassport.nl/id/concept/> .
+@prefix terms:     <http://purl.org/dc/terms/> .
+@prefix tpl:       <https://grafsync.graphifi.com/schema/tsv/> .
+@prefix ug:        <https://graphifi.com/data/usergroup/> .
+@prefix vc:        <https://www.w3.org/ns/credentials/v2> .
+@prefix vm:        <https://grafsync.graphifi.com/schema/vm/> .
+@prefix vme:       <https://grafsync.graphifi.com/schema/vm-entitlement/> .
+@prefix xkos:      <https://graphifi.com/schema/xkos/> .
+@prefix xowl:      <https://graphifi.com/schema/xowl/> .
+@prefix xsd:       <http://www.w3.org/2001/XMLSchema#> .
+@prefix zv:        <http://taxonomie.zorgeloosvastgoed.nl/id/concept/> .
+@prefix zvg:       <http://taxonomie.zorgeloosvastgoed.nl/def/zvg#> .
+
+taxonomie:POBoxNumber
+        rdf:type           skos:Concept ;
+        dct:modified       "2025-04-23T13:17:42.051Z"^^xsd:dateTime , "2025-04-06T05:40:46.638Z"^^xsd:dateTime ;
+        skos:altLabel      "Post Office Box"@en ;
+        skos:broader       begrippen:adres ;
+        skos:definition    "A uniquely assigned number used for receiving mail at a post office, rather than at a street address."@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Postbusnummer"@nl-nl , "P.O. Box Number"@en ;
+        skos:scopeNote     "This concept is used for official correspondence and mailing purposes, often for businesses and organizations."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+<http://taxonomie.companypassport.nl>
+        rdf:type            skos:ConceptScheme ;
+        dct:created         "2025-03-27T13:19:20.33Z"^^xsd:dateTime ;
+        dct:creator         "Davinci Conclusion"@en ;
+        dct:description     "A controlled vocabulary for concepts related to verifiable legal company credentials, used in company registration and banking."@en ;
+        dct:issued          "2025-03-24"^^xsd:date ;
+        dct:modified        "2025-04-06T10:39:48.594Z"^^xsd:dateTime ;
+        dct:provenance      "Version 0.1 of the thesaurus, currently in concept stage. It is awaiting review and final approval."@en ;
+        dct:subject         dct:subject ;
+        dct:title           "Company Passport Thesaurus for Legal Company Verifiable Credentials"@en ;
+        dct:version         0.1 ;
+        skos:hasTopConcept  begrippen:functie , taxonomie:telephoneNumber , kvk:DA5899751 , taxonomie:nameOfRegion , taxonomie:LegalPersonCredential , kvk:DA5899331 , taxonomie:LPID , taxonomie:legalRepresentative , begrippen:land , begrippen:geboortedatum , taxonomie:prefix , kvk:DA5901425 , taxonomie:percentageOfControl , kvk:DA5899363 , begrippen:voornamen , taxonomie:BankAccountCredential , begrippen:postcode , begrippen:huisnummertoevoeging , begrippen:functionaris , taxonomie:percentageOwnershipOrganization , taxonomie:percentageOwnership , begrippen:geslachtsnaam , taxonomie:sexCode , begrippen:huisnummer , taxonomie:UBODeFactoControl , taxonomie:emailAddress , <http://begrippen.bank.nl/id/concept/IBAN> , belasting:Belastingnummer , taxonomie:TaxIDCredential , begrippen:natuurlijkPersoon , begrippen:adres , begrippen:straat , belasting:Belastingdienst , taxonomie:initials , taxonomie:percentageOwnershipUBO , taxonomie:UBOEconomicInterest , taxonomie:equityOriginAmount , taxonomie:POBoxNumber , kvk:DA5898460 , begrippen:plaats , taxonomie:UBOStatutoryDirector , kvk:DA252477634 , taxonomie:DeedOfIncorporationCredential , belasting:BTW-nummer , taxonomie:UBO , taxonomie:originResources ;
+        gs:useSlashIRI      true ;
+        gs:useUuidIRI       false .
+
+kvk:DA5899363  rdf:type    skos:Concept ;
+        dct:modified       "2025-04-23T13:18:26.409Z"^^xsd:dateTime , "2025-04-03T14:27:50.018Z"^^xsd:dateTime ;
+        skos:definition    "Activiteiten zijn de werkzaamheden die in het kader van een onderneming, rechtspersoon verricht worden."@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Legal entity activity"@en , "Activiteit van rechtspersoon"@nl-nl ;
+        skos:related       kvk:DA252477634 , kvk:DA5899751 ;
+        skos:scopeNote     "Activiteiten omschrijven het werk dat een bedrijf of organisatie uitvoert."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      2 .
+
+taxonomie:originResources
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-23T13:18:53.069Z"^^xsd:dateTime ;
+        skos:altLabel       "Source of Funds"@en ;
+        skos:definition     "The source from which an organization obtains its financial resources."@en ;
+        skos:editorialNote  "The classification of financial sources may depend on regulatory requirements and reporting standards."@en ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel      "Origin of Resources"@en , "Herkomst van middelen"@nl-nl ;
+        skos:scopeNote      "This concept is used to classify different origins of financial resources, such as investments, loans, or donations."@en ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       1 .
+
+taxonomie:percentageOwnershipOrganization
+        rdf:type           skos:Concept ;
+        dct:modified       "2025-04-03T14:54:59.135Z"^^xsd:dateTime , "2025-04-23T13:19:29.821Z"^^xsd:dateTime ;
+        skos:altLabel      "Eigendomspercentage van de organisatie op de direct\n            onderliggende organisatie"@nl ;
+        skos:definition    "Het eigendomspercentage van een organisatie op een direct onderliggende entiteit."@nl , "The ownership percentage of an organization on a directly underlying entity."@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Organization's ownership percentage on the directly underlying\n            organization"@en , "Eigendomspercentage van de organisatie in de onderliggende organisatie"@nl-nl ;
+        skos:scopeNote     "Geeft de eigendomsstructuur van een organisatie weer."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+taxonomie:LPID  rdf:type   skos:Concept ;
+        dct:modified       "2025-04-03T14:29:59.54Z"^^xsd:dateTime , "2025-04-23T13:20:06.699Z"^^xsd:dateTime ;
+        skos:altLabel      "LPID"@en ;
+        skos:broader       kvk:DA5899751 ;
+        skos:definition    "A unique identifier assigned to legal entities to facilitate recognition and interaction within digital systems, as defined by Regulation (EU) 2024/2977."@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Legal person identifier"@en , "Identificatienummer rechtspersoon"@nl-nl ;
+        skos:related       kvk:DA5899331 , kvk:DA5901425 ;
+        skos:scopeNote     "The LPID is used for the secure authentication and identification of legal entities across the European Digital Identity framework. It should not be confused with other business identifiers such as national registration numbers or tax identification numbers."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+taxonomie:telephoneNumber
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-23T13:20:40.899Z"^^xsd:dateTime , "2025-04-03T14:56:08.108Z"^^xsd:dateTime ;
+        skos:definition     "A numerical identifier assigned to a telephone line for communication purposes."@en ;
+        skos:editorialNote  "Consider using standardized formats like E.164 to ensure consistency."@en ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel      "Telefoonnummer"@nl-nl , "Phone number"@en ;
+        skos:related        kvk:DA346652927 ;
+        skos:scopeNote      "This property is used for storing landline or mobile phone numbers in international format when possible."@en ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       2 .
+
+taxonomie:legalRepresentative
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-23T13:21:40.259Z"^^xsd:dateTime ;
+        skos:altLabel       "Company Representative"@en ;
+        skos:definition     "An individual officially representing a legal entity in business or regulatory matters."@en ;
+        skos:editorialNote  "The values for Legal Representative can be a Contact Person and/or a UBO Statutory Director."@en ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel      "Legal representative"@en , "Wettelijke vertegenwoordiger"@nl-nl ;
+        skos:scopeNote      "A Legal Representative may be responsible for signing contracts, financial decisions, and legal compliance."@en ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       2 .
+
+taxonomie:LegalPersonCredential
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-23T13:22:16.939Z"^^xsd:dateTime , "2025-04-03T14:30:17.7Z"^^xsd:dateTime ;
+        skos:altLabel       "Company Registration Document"@en , "Business Registration Certificate"@en ;
+        skos:definition     "A credential issued by an authorized registration authority certifying the legal existence of a company or organization."@en ;
+        skos:editorialNote  "This concept is used to define official documents proving the registration of a legal entity."@en ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel      "Legal person credential"@en , "Bewijs van rechtspersoon"@nl-nl ;
+        skos:scopeNote      "The credential is typically issued by government authorities or official registries responsible for business and company registrations."@en ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       2 .
+
+taxonomie:UBOStatutoryDirector
+        rdf:type           skos:Concept ;
+        skos:altLabel      "UBO op basis van bestuursfunctie"@nl , "UBO via Executive Position"@en ;
+        skos:broader       taxonomie:UBO , begrippen:natuurlijkPersoon ;
+        skos:definition    "Een persoon die als UBO wordt aangewezen vanwege zijn of haar rol als statutair directeur van een rechtspersoon, vooral wanneer geen andere UBO op basis van eigendom of zeggenschap kan worden vastgesteld."@nl , "A person identified as a UBO due to their position as the statutory director of a legal entity, especially when no other UBO can be identified through ownership or control."@en ;
+        skos:example       "Als geen UBO kan worden vastgesteld via eigendom of zeggenschap, wordt de statutair directeur geregistreerd als UBO."@nl , "If no UBO can be identified through ownership or control, the statutory director is registered as the UBO."@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "UBO Statutory Director"@en , "UBO Statutair Directeur"@nl ;
+        skos:scopeNote     "Deze UBO-categorie wordt meestal als vangnet gebruikt wanneer eigendoms- en zeggenschapsstructuren onduidelijk zijn of geen natuurlijke persoon met doorslaggevende invloed aanwijzen."@nl , "This UBO category is typically used as a fallback when ownership and control structures are unclear or do not reveal a natural person with significant control."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> .
+
+taxonomie:sexCode  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-23T13:22:50.03Z"^^xsd:dateTime , "2025-04-03T14:54:44.809Z"^^xsd:dateTime ;
+        skos:altLabel      "Geslacht"@nl ;
+        skos:broader       begrippen:natuurlijkPersoon ;
+        skos:definition    "A classification code used to indicate the biological sex of a person."@en ;
+        skos:example       "e.g., Male, Female, Other"@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Geslachtscode"@nl-nl , "Sex Code"@en ;
+        skos:scopeNote     "This code is used to distinguish between different sexes for administrative or statistical purposes."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+<https://grafsync.graphifi.com/data/project/b3b13056-30fc-4e77-94d8-f3059b4fb70a>
+        rdf:type          gs:TaxonomyProject ;
+        dct:created       "2025-04-23T10:35:49.653Z"^^xsd:dateTime ;
+        dct:modified      "2025-04-23T10:35:54.07Z"^^xsd:dateTime ;
+        dct:title         "Company Passport 04"@en ;
+        gs:defaultLang    "en" ;
+        gs:hasComponent   <http://taxonomie.companypassport.nl> ;
+        gs:projectColour  "50832C" ;
+        gs:projectLang    "en-gb" , "en" , "nl-nl" ;
+        gs:revisionNo     1 ;
+        gs:skosXL         true .
+
+taxonomie:TaxIDCredential
+        rdf:type           skos:Concept ;
+        dct:created        "2025-04-06T10:39:48.496Z"^^xsd:dateTime ;
+        dct:modified       "2025-04-23T13:23:15.31Z"^^xsd:dateTime ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Belastingidentificatiebewijs"@nl-nl , "Tax ID credential"@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+begrippen:voornamen  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-03T14:26:57.76Z"^^xsd:dateTime , "2025-04-23T13:23:56.36Z"^^xsd:dateTime ;
+        skos:broader       begrippen:natuurlijkPersoon ;
+        skos:definition    "Aan de naam van een natuurlijke persoon voorafgaande onderscheidende na(a)m(en) van die natuurlijke persoon."@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Voornamen"@nl-nl , "First name"@en ;
+        skos:scopeNote     "All first names in one string, separated by spaces."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      3 .
+
+belasting:Belastingnummer
+        rdf:type           skos:Concept ;
+        dct:modified       "2025-04-03T14:57:39.995Z"^^xsd:dateTime ;
+        skos:altLabel      "Fiscal number"@en , "Fiscaal nummer"@nl ;
+        skos:broder        belasting:Belastingdienst ;
+        skos:definition    "A unique number used for tax registration and identification of natural person and businesses by the national tax authorities."@en , "Een uniek nummer dat wordt gebruikt voor belastingregistratie en identificatie van particulieren en bedrijven door de nationale belastingdienst."@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Belastingnummer"@nl , "Tax Number"@en ;
+        skos:scopeNote     "The tax number is used for administrative and fiscal purposes and can vary in structue and designation depending on the country."@en , "Het belastingnummer wordt gebruikt voor administratieve en fiscale doeleinden en kan per land verschillen in structuur en benaming."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> .
+
+kvk:DA5901425  rdf:type    skos:Concept ;
+        dct:modified       "2025-04-03T14:30:32.256Z"^^xsd:dateTime ;
+        skos:altLabel      "Statuatory name"@en ;
+        skos:definition    "De naam rechtspersoon is de naam van de rechtspersoon zoals die in wetgeving, overeenkomst of statuten is vastgelegd."@nl ;
+        skos:exactMatch    <http://opendata.stelselcatalogus.nl/hr/id/gegevenselement/Statutairenaam-Niet_Natuurlijk_Persoon> ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Naam rechtspersoon"@nl , "Legal person name"@en ;
+        skos:related       taxonomie:LPID ;
+        skos:scopeNote     "Official current legal person name as registered in the business register."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> .
+
+kvk:DA252477634  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-03T14:27:59.134Z"^^xsd:dateTime , "2025-04-23T13:25:01.7Z"^^xsd:dateTime ;
+        skos:altLabel      "Bedrijfsomschrijving"@nl-nl ;
+        skos:definition    "De activiteitenomschrijving is een korte omschrijving van de feitelijk uitgeoefende activiteiten van de vestiging, onderneming of rechtspersoon."@nl-nl , "The activity description is a brief description of the actual activities performed by the establishment, business, or legal entity."@en ;
+        skos:example       "het inkopen, verkopen, importeren, exporteren, distribueren, de groothandel, detailhandel, dropshipping en online verkoop van consumentenproducten, partijgoederen en restpartijen"@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Omschrijving activiteit rechtspersoon"@nl-nl , "Legal entity activity description"@en ;
+        skos:related       kvk:DA5899363 ;
+        skos:scopeNote     "Een activiteitenomschrijving is een korte omschrijving van het werk dat een bedrijf of organisatie uitvoert."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      2 .
+
+taxonomie:percentageOwnershipUBO
+        rdf:type           skos:Concept ;
+        dct:modified       "2025-04-23T13:25:42.14Z"^^xsd:dateTime , "2025-03-31T12:46:27.23Z"^^xsd:dateTime ;
+        skos:altLabel      "Eigendomspercentage van de UBO op de direct onderliggende organisatie"@nl ;
+        skos:broader       taxonomie:UBO ;
+        skos:definition    "Het eigendomspercentage van de UBO in de eerstvolgende laag van de organisatiestructuur."@nl , "The ownership percentage of the UBO in the directly underlying organization."@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "UBO's ownership percentage on the directly underlying organization"@en , "Eigendomspercentage van de UBO in de onderliggende organisatie"@nl-nl ;
+        skos:scopeNote     "Geeft aan hoeveel directe eigendom een UBO heeft in een specifieke organisatie."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      2 .
+
+taxonomie:DeedOfIncorporationCredential
+        rdf:type           skos:Concept ;
+        dct:created        "2025-04-06T10:38:45.049Z"^^xsd:dateTime ;
+        dct:modified       "2025-04-23T13:26:09.519Z"^^xsd:dateTime ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Oprichtingsakte"@nl-nl , "Deed of incorporation credential"@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+begrippen:huisnummer  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-23T13:26:32.319Z"^^xsd:dateTime , "2025-04-03T14:23:36.662Z"^^xsd:dateTime ;
+        skos:broader       begrippen:adres ;
+        skos:definition    "Een huisnummer is een door of namens het gemeentebestuur ten aanzien van een adresseerbaar object toegekende nummering."@nl ;
+        skos:example       "een getal tussen 1 en 99999"@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Huisnummer"@nl-nl , "House number"@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      2 .
+
+begrippen:adres  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-23T13:27:44.419Z"^^xsd:dateTime , "2025-04-06T05:40:46.638Z"^^xsd:dateTime ;
+        skos:definition    "Een adres is een door het bevoegde gemeentelijke orgaan aan een verblijfsobject, een standplaats of een ligplaats toegekende benaming, bestaande uit een combinatie van de naam van een openbare ruimte, een nummeraanduiding en de naam van een woonplaats."@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:narrower      begrippen:plaats , begrippen:huisnummer , begrippen:postcode , begrippen:huisnummertoevoeging , begrippen:straat , begrippen:land , taxonomie:POBoxNumber ;
+        skos:prefLabel     "Address"@en , "Adres"@nl-nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      2 .
+
+begrippen:plaats  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-03T14:22:56.698Z"^^xsd:dateTime , "2025-04-23T13:28:05.91Z"^^xsd:dateTime ;
+        skos:altLabel      "Plaats"@nl ;
+        skos:broader       begrippen:adres ;
+        skos:definition    "De naam van een woon- of vestigingsplaats is de naam die de gemeente aan een woon- of een vestigingsplaats heeft gegeven."@nl ;
+        skos:example       "Den Haag"@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "City"@en , "Stad"@nl-nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+begrippen:straat  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-03T14:24:20.483Z"^^xsd:dateTime , "2025-04-23T13:28:28.531Z"^^xsd:dateTime ;
+        skos:broader       begrippen:adres ;
+        skos:definition    "De naam van een openbare ruimte is de door het bevoegde gemeentelijke orgaan aan een openbare ruimte toegekende benaming en een authentiek gegeven."@nl ;
+        skos:example       "Kerkstraat"@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Straatnaam"@nl-nl , "Street name"@en ;
+        skos:scopeNote     "Street of the person/legal person."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      2 .
+
+taxonomie:emailAddress
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-23T13:28:49.109Z"^^xsd:dateTime , "2025-04-03T14:25:51.457Z"^^xsd:dateTime ;
+        skos:altLabel       "E-mail"@nl ;
+        skos:definition     "A unique identifier for an electronic mail account used for sending and receiving messages over the Internet."@en ;
+        skos:editorialNote  "Ensure email addresses are stored in lowercase to avoid case sensitivity issues."@en ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel      "E-mailadres"@nl-nl , "Email Address"@en ;
+        skos:related        kvk:DA346652927 ;
+        skos:scopeNote      "Email addresses should follow the RFC 5322 format and be validated for correctness."@en ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       1 .
+
+taxonomie:percentageOfControl
+        rdf:type           skos:Concept ;
+        dct:modified       "2025-04-03T14:55:32.245Z"^^xsd:dateTime ;
+        skos:altLabel      "Percentage van verkregen zeggenschapsbelang"@nl ;
+        skos:definition    "Het percentage zeggenschap dat een UBO heeft over een entiteit."@nl , "The percentage of control that a UBO has over an entity."@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Percentage of acquired control"@en ;
+        skos:scopeNote     "Dit percentage geeft aan in hoeverre een UBO beslissingen kan beïnvloeden."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> .
+
+taxonomie:UBODeFactoControl
+        rdf:type           skos:Concept ;
+        skos:altLabel      "Feitelijke UBO"@nl , "UBO Actual Control"@en ;
+        skos:broader       taxonomie:UBO , begrippen:natuurlijkPersoon ;
+        skos:definition    "A natural person who ultimately owns or controls a legal entity through informal or indirect means, without necessarily holding shares or voting rights."@en , "Een natuurlijk persoon die uiteindelijk zeggenschap heeft over een rechtspersoon via informele of indirecte middelen, zonder noodzakelijkerwijs aandelen of stemrechten te bezitten."@nl ;
+        skos:example       "Een externe adviseur zonder formeel eigendom, van wie de beslissingen echter altijd worden overgenomen door het bestuur, kan worden aangemerkt als UBO op basis van feitelijke zeggenschap."@nl , "An external advisor who has no formal ownership, but whose decisions are always followed by the board, may be considered a UBO based on de facto control."@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "UBO op basis van feitelijke zeggenschap"@nl , "UBO Based on De Facto Control"@en ;
+        skos:scopeNote     "Used when ownership or control is exercised through influence, arrangements, or decision-making power not formally recorded in ownership structures."@en , "Wordt gebruikt wanneer zeggenschap wordt uitgeoefend via invloed, afspraken of beslissingsmacht die niet formeel is vastgelegd in eigendomsstructuren."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> .
+
+begrippen:functie  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-07T10:21:17.076Z"^^xsd:dateTime ;
+        skos:broader       begrippen:functionaris ;
+        skos:definition    "Een specifieke rol of positie binnen een organisatie, meestal geassocieerd met bepaalde taken en verantwoordelijkheden."@nl ;
+        skos:example       "commissaris, vereffenaar, uitsluitend enig aandeelhouder, bestuurder in one-tier board, uitvoerend bestuurder, niet uitvoerend bestuurder"@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Functie"@nl , "Function"@en ;
+        skos:scopeNote     "GLEIF kent de volgende functiebenamingen:\nAandeelhouder\nBeheerder\nBeheerder / Beherend Vennoot\nBeherend Vennoot\nBestuurder\nBestuurder / bestuurslid\nCommissaris\nCurator\nHouder van certificaten (van aandelen)\nLid\nNiet uitvoerend bestuurder\nOprichter\nPenningmeester\nSecretaris\nStille Vennoot / Commanditaire Vennoot\nUitvoerend bestuurder\nVennoot\nVennoot / Maat\nVereffenaar\nVertegenwoordigingsbevoegde\nVoorzitter\nVoorzitter bestuur\nVoorzitter raad van commissarissen"@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> .
+
+kvk:DA5898460  rdf:type    skos:Concept ;
+        dct:modified       "2025-04-03T14:28:49.193Z"^^xsd:dateTime ;
+        skos:definition    "Een rechtsvorm is de gekozen juridische vorm waarbinnen de activiteiten van een onderneming or rechtspersoon worden uitgevoerd."@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Legal form type"@en , "Rechtsvorm"@nl ;
+        skos:related       kvk:DA5899751 ;
+        skos:scopeNote     "GLEIF kent de volgende waarden:\n\nvereniging met volledige rechtsbevoegdheid\neenmanszaak\nbesloten vennootschap met beperkte aansprakelijkheid\nEuropees Economisch Samenwerkingsverband\nvennootschap onder firma\nvereniging met beperkte rechtsbevoegdheid\nmaatschap\npubliekrechtelijke rechtspersoon\nnaamloze vennootschap\nEuropese naamloze vennootschap (Societas Europaea)\ncommanditaire vennootschap\nonderlinge waarborgmaatschappij\nrechtspersoon in oprichting\nvereniging van eigenaars\nfonds voor gemene rekening\nkerkgenootschap\nOverige Privaatrechtelijke Rechtspersoon\ncoöperatie\nrederij\nstichting\nSocietas Cooperativa Europaea"@nl-nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> .
+
+begrippen:geslachtsnaam
+        rdf:type           skos:Concept ;
+        dct:modified       "2025-04-03T14:26:41.426Z"^^xsd:dateTime , "2025-04-23T13:30:46.009Z"^^xsd:dateTime ;
+        skos:altLabel      "Geslachtsnaam"@nl ;
+        skos:broader       begrippen:natuurlijkPersoon ;
+        skos:definition    "Voorvoegsels en de familienaam of geslachtsnaam van een natuurlijke persoon."@nl ;
+        skos:example       "van Oss - de Vries"@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Achternaam"@nl-nl , "Family name"@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+begrippen:natuurlijkPersoon
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-23T13:31:09.69Z"^^xsd:dateTime , "2025-04-03T14:31:05.01Z"^^xsd:dateTime ;
+        skos:definition     "Rechtssubject, zelfstandig drager van subjectieve rechten en plichten, zijnde een mens."@nl ;
+        skos:editorialNote  "Bronhouder van het begrip 'natuurlijk persoon' is de BRP. De KNB kiest voor een andere juridische definitie waardoor dit begrip afwijkt van die van de BRP."@nl ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:narrower       taxonomie:sexCode , begrippen:geslachtsnaam , taxonomie:prefix , begrippen:functionaris , taxonomie:UBOStatutoryDirector , taxonomie:initials , taxonomie:UBOEconomicInterest , begrippen:voornamen , taxonomie:UBODeFactoControl , begrippen:geboortedatum ;
+        skos:prefLabel      "Natural person"@en , "Natuurlijke persoon"@nl ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       1 .
+
+taxonomie:equityOriginAmount
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-23T13:31:33.99Z"^^xsd:dateTime ;
+        skos:altLabel       "Amount of Contributed Funds"@en ;
+        skos:definition     "The amount of financial resources contributed to an organization from a specific origin."@en ;
+        skos:editorialNote  "The calculation of contributed funds may follow financial reporting standards and legal requirements."@en ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel      "Herkomst kapitaalbedrag"@nl-nl , "Equity Origin Amount"@en ;
+        skos:scopeNote      "This concept is used to quantify the funds injected into an organization, categorized by their source."@en ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       1 .
+
+begrippen:huisnummertoevoeging
+        rdf:type           skos:Concept ;
+        dct:modified       "2025-04-03T14:27:21.187Z"^^xsd:dateTime , "2025-04-23T13:26:57.549Z"^^xsd:dateTime ;
+        skos:broader       begrippen:adres ;
+        skos:definition    "Een huisnummertoevoeging is een door het bevoegde gemeentelijke orgaan als zodanig toegekende toevoeging bij het huisnummer van een verblijfsobject, een standplaats of een ligplaats."@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "House number addition"@en , "Huisnummertoevoeging"@nl-nl ;
+        skos:scopeNote     "De gemeente kan een huisnummertoevoeging toevoegen aan een huisnummer en een eventuele huisletter. Een huisnummertoevoeging bestaat uit 4 tekens en kan een combinatie zijn van hoofdletters, kleine letters en/of cijfers."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      2 .
+
+kvk:DA5899751  rdf:type     skos:Concept ;
+        dct:modified        "2025-04-03T14:29:29.872Z"^^xsd:dateTime ;
+        skos:altLabel       "RP"@nl ;
+        skos:definition     "Een rechtspersoon is een zelfstandig drager van rechten en plichten, niet zijnde een natuurlijk persoon."@nl ;
+        skos:editorialNote  "Nederlandse rechtspersonen bezitten rechtspersoonlijkheid, dit volgt uit Burgerlijk Wetboek Boek 2. In artikel 6 van de Handelsregisterwet zijn de rechtspersonen benoemd die worden opgenomen in het Handelsregister. In §4.3 van het Handelsregisterbesluit 2008 staan aanvullingen voor registratie van ondernemingen en nevenvestigingen bij niet-Nederlandse rechtspersonen en vennootschappen."@nl ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:narrower       taxonomie:LPID ;
+        skos:prefLabel      "Rechtspersoon"@nl , "Legal person"@en ;
+        skos:related        kvk:DA5899863 , kvk:DA5899526 , kvk:DA5899542 , kvk:DA5899363 , kvk:DA5898460 , kvk:DA5899855 , belasting:Belastingdienst ;
+        skos:scopeNote      "Een rechtspersoon is geen mens maar een organisatie die eigen rechten en plichten heeft."@nl ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> .
+
+belasting:Belastingdienst
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-03T14:57:22.227Z"^^xsd:dateTime ;
+        skos:altLabel       "Fiscal Administration"@en , "Tax Authority"@en ;
+        skos:definition     "The governmental body responsible for tax collection and regulation within a jurisdiction."@en ;
+        skos:editorialNote  "The structure and responsibilities of tax administrations may vary by country."@en ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel      "Tax Administration"@en ;
+        skos:related        kvk:DA5899751 ;
+        skos:scopeNote      "This concept refers to institutions that oversee taxation, enforce tax laws, and process tax-related matters."@en ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> .
+
+kvk:DA5899331  rdf:type    skos:Concept ;
+        dct:modified       "2025-04-03T14:26:34.275Z"^^xsd:dateTime ;
+        skos:altLabel      "Legal Person Id"@en , "EUID"@en ;
+        skos:definition    "A unique identifier assigned to companies within the European Union to facilitate cross-border recognition and information exchange between national business registers."@en ;
+        skos:example       "Een Nederlands voorbeeld van de EUID: NL(een code voor het land van inschrijving)NHR(een code voor het register).(een punt als scheidingsteken)67435955(het nationale inschrijfnummer)"@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "European Unique Identifier"@en ;
+        skos:related       taxonomie:LPID ;
+        skos:scopeNote     "The EUID is used for company identification across EU business registers. It consists of a country code, a register identifier, and a company number."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> .
+
+taxonomie:UBO  rdf:type     skos:Concept ;
+        dct:modified        "2025-04-03T14:58:29.993Z"^^xsd:dateTime , "2025-04-23T13:32:27.869Z"^^xsd:dateTime ;
+        skos:altLabel       "Uiteindelijke Belanghebbende"@nl ;
+        skos:definition     "A natural person who ultimately owns or controls an organization."@en , "Een natuurlijke persoon die de uiteindelijke eigenaar is van of zeggenschap heeft over een organisatie."@nl ;
+        skos:editorialNote  "Definition based on European Union guidelines and Dutch legislation."@en , "Definitie gebaseerd op de richtlijnen van de Europese Unie en Nederlandse wetgeving."@nl ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:narrower       taxonomie:percentageOwnershipUBO , taxonomie:UBOEconomicInterest , taxonomie:UBODeFactoControl , taxonomie:UBOStatutoryDirector ;
+        skos:prefLabel      "Ultimate Beneficial Owner"@en , "Uiteindelijke belanghebbende (UBO)"@nl-nl ;
+        skos:scopeNote      "The UBO concept is used for transparency in financial transactions and combating money laundering and terrorist financing."@en , "Het UBO-concept wordt gebruikt voor transparantie bij financiële transacties en ter bestrijding van witwassen en terrorismefinanciering."@nl ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       5 .
+
+taxonomie:prefix  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-03T14:54:32.057Z"^^xsd:dateTime , "2025-04-23T13:32:59.711Z"^^xsd:dateTime ;
+        skos:broader       begrippen:natuurlijkPersoon ;
+        skos:definition    "Een klein woord dat vóór een achternaam wordt geplaatst, zoals 'van', 'de' of 'ter' in Nederlandse namen."@nl , "A small word or set of letters placed before a surname, often indicating nobility, geographical origin, or linguistic tradition."@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Prefix"@en , "Voorvoegsel"@nl-nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      2 .
+
+<http://begrippen.bank.nl/id/concept/IBAN>
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-23T13:33:21.03Z"^^xsd:dateTime ;
+        skos:altLabel       "Bank Account Number"@en ;
+        skos:definition     "A standardized international numbering system for bank accounts, used to facilitate cross-border transactions."@en ;
+        skos:editorialNote  "Ensure proper validation of IBAN format using official country-specific length and structure rules."@en ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel      "Internationaal bankrekeningnummer (IBAN)"@nl-nl , "International Bank Account Number (IBAN)"@en ;
+        skos:scopeNote      "Use this property to store bank account numbers following the IBAN standard (ISO 13616)."@en ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       1 .
+
+belasting:BTW-nummer  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-03T14:58:45.161Z"^^xsd:dateTime ;
+        skos:altLabel      "VAT-identificationumber"@en , "BTW-identificatienummer"@nl ;
+        skos:broder        belasting:Belastingdienst ;
+        skos:definition    "Een uniek identificatienummer toegekend aan bedrijven voor belastingdoeleinden binnen de Europese Unie."@nl ;
+        skos:example       "NL123456789B01 is een voorbeeld van een Nederlands BTW-nummer."@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "BTW-nummer"@nl , "VAT Number"@en ;
+        skos:scopeNote     "The VAT number is used for cross-border trade within the EU and is tequired for liable to pay VAT."@en , "Het BTW-nummer wordt gebruikt bij grensoverschrijdende handel binnen de EU en is verplicht voor bedrijven die BTW moeten afdragen."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> .
+
+taxonomie:nameOfRegion
+        rdf:type           skos:Concept ;
+        dct:modified       "2025-04-03T14:30:46.139Z"^^xsd:dateTime , "2025-04-23T13:33:42.769Z"^^xsd:dateTime ;
+        skos:altLabel      "Geographical Region Name"@en ;
+        skos:definition    "The official or commonly used name of a geographical or administrative region."@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Regio"@nl-nl , "Name of Region"@en ;
+        skos:scopeNote     "This concept applies to regions defined by governmental or statistical purposes, such as provinces, states, or districts."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+begrippen:geboortedatum
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-03T14:25:35.074Z"^^xsd:dateTime , "2025-04-23T13:34:03.489Z"^^xsd:dateTime ;
+        skos:broader        begrippen:natuurlijkPersoon ;
+        skos:definition     "The specific date on which a person was born, typically recorded in the format YYYY-MM-DD."@en ;
+        skos:editorialNote  "Ensure proper handling of time zones and calendar differences when storing historical birthdates."@en ;
+        skos:example        "23-09-2001"@nl ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel      "Date of birth"@en , "Geboortedatum"@nl-nl ;
+        skos:scopeNote      "Use this property to store a person's birthdate following ISO 8601 format (YYYY-MM-DD)."@en ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       2 .
+
+begrippen:postcode  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-03T14:24:08.691Z"^^xsd:dateTime , "2025-04-23T13:34:25.15Z"^^xsd:dateTime ;
+        skos:broader       begrippen:adres ;
+        skos:definition    "De postcode is een coderingssystematiek zoals ontwikkeld en beheerd door PostNL. Een postcode is een niet-authentiek gegeven met betrekking tot een nummeraanduiding."@nl ;
+        skos:example       "2780 AG"@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Postal code"@en , "Postcode"@nl-nl ;
+        skos:scopeNote     "Postal code of the person/legal person."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      2 .
+
+taxonomie:BankAccountCredential
+        rdf:type            skos:Concept ;
+        dct:modified        "2025-04-23T13:34:47.969Z"^^xsd:dateTime , "2025-04-03T14:25:04.315Z"^^xsd:dateTime ;
+        skos:altLabel       "IBAN Credential"@en , "Bank Account Verification Document"@en ;
+        skos:definition     "A credential issued by a financial institution certifying the ownership and validity of a bank account, typically associated with an IBAN."@en ;
+        skos:editorialNote  "This concept is used for credentials proving the existence and validity of a bank account, often required for financial transactions and regulatory compliance."@en ;
+        skos:inScheme       <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel      "Bank Account Credential"@en , "Bankrekeningbewijs"@nl-nl ;
+        skos:related        <http://example.org/ontology#FinancialInstitution> ;
+        skos:scopeNote      "This credential is typically issued by banks or other financial institutions and may be used for business transactions, identity verification, and compliance purposes."@en ;
+        skos:topConceptOf   <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo       1 .
+
+begrippen:functionaris
+        rdf:type           skos:Concept ;
+        dct:modified       "2025-04-23T13:35:13.38Z"^^xsd:dateTime , "2025-04-03T14:31:12.646Z"^^xsd:dateTime ;
+        skos:altLabel      "Bevoegde vertegenwoordiger"@nl-nl ;
+        skos:broader       begrippen:natuurlijkPersoon ;
+        skos:definition    "Een persoon die een specifieke functie of rol bekleedt binnen een organisatie of instelling."@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:narrower      begrippen:functie ;
+        skos:prefLabel     "Authorized Representative"@en , "Functionaris"@nl ;
+        skos:scopeNote     "Gebruik deze term voor personen die een officiële verantwoordelijkheid dragen, zoals bestuurders of leidinggevenden."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+begrippen:land  rdf:type   skos:Concept ;
+        dct:modified       "2025-04-23T13:35:33.479Z"^^xsd:dateTime , "2025-04-03T14:25:17.492Z"^^xsd:dateTime ;
+        skos:broader       begrippen:adres ;
+        skos:definition    "A distinct territorial entity, recognized as an independent nation or part of a political division, typically defined by geographic boundaries."@en ;
+        skos:example       "NL"@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Land"@nl-nl , "Country"@en ;
+        skos:scopeNote     "The 2 character ISO 3166-1 compliant country code of the country."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      2 .
+
+taxonomie:percentageOwnership
+        rdf:type           skos:Concept ;
+        dct:modified       "2025-04-23T13:29:42.421Z"^^xsd:dateTime , "2025-04-03T14:55:46.374Z"^^xsd:dateTime ;
+        skos:altLabel      "Percentage van verkregen eigendomsbelang"@nl ;
+        skos:definition    "The percentage of ownership that a UBO has in an entity."@en , "Het percentage eigendom dat een UBO heeft in een entiteit."@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Percentage verworven eigendom"@nl-nl , "Percentage of acquired ownership"@en ;
+        skos:scopeNote     "Dit percentage wordt gebruikt om de mate van eigendom te bepalen."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
+
+taxonomie:UBOEconomicInterest
+        rdf:type           skos:Concept ;
+        skos:altLabel      "Economic Interest UBO"@en , "UBO via winstgerechtigdheid"@nl ;
+        skos:broader       begrippen:natuurlijkPersoon , taxonomie:UBO ;
+        skos:definition    "Een persoon die als UBO wordt aangemerkt omdat hij of zij recht heeft op een significant deel van de winst of economische voordelen van een rechtspersoon, ongeacht formeel eigendom."@nl , "A person considered a UBO because they are entitled to a significant share of profits or economic benefits from a legal entity, regardless of formal ownership."@en ;
+        skos:example       "In een commanditaire vennootschap kan een stille vennoot die 60% van de winst ontvangt, worden beschouwd als UBO op basis van economisch belang."@nl , "In a limited partnership, a silent partner receiving 60% of the profits may be a UBO based on economic interest."@en ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "UBO op basis van economisch belang"@nl , "UBO Based on Percentage of Economic Interest"@en ;
+        skos:scopeNote     "Relevant in situaties waarin uiteindelijk belang wordt gebaseerd op financiële aanspraken in plaats van aandelen of stemrechten, bijvoorbeeld in personenvennootschappen of trusts."@nl , "Relevant in situations where beneficial ownership is linked to financial entitlements rather than shares or votes, e.g. in partnerships or trusts."@en ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> .
+
+taxonomie:initials  rdf:type  skos:Concept ;
+        dct:modified       "2025-04-23T13:35:51.849Z"^^xsd:dateTime , "2025-04-03T14:27:35.568Z"^^xsd:dateTime ;
+        skos:broader       begrippen:natuurlijkPersoon ;
+        skos:definition    "The first letters of a person's given names, often used as an abbreviation of the full name."@en , "De eerste letter of letters van een persoonsnaam."@nl ;
+        skos:inScheme      <http://taxonomie.companypassport.nl> ;
+        skos:prefLabel     "Voorletters"@nl-nl , "Initials"@en ;
+        skos:scopeNote     "Vaak gebruikt als afkorting."@nl ;
+        skos:topConceptOf  <http://taxonomie.companypassport.nl> ;
+        gs:revisionNo      1 .
