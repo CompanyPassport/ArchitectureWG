@@ -1,0 +1,124 @@
+import { Title } from '@components/Title'
+
+# Taxonomy
+
+<Title size="large" variant="primary">Company Passport Taxonomy</Title>
+
+This page provides an overview of the first Company Passport taxonomy release and the example credential structures that accompany it.
+
+The taxonomy release is intended to describe the data structures used in the Company Passport trust framework for organizational attestations and related company data.
+
+## Release 1.0
+
+The first taxonomy release contains:
+
+- `BankAccountCredential.json`
+- `DeedOfIncorporationCredential.json`
+- `KVKRegistration.json`
+- `TaxIDCredential.json`
+- `UBO.json`
+- `cpOntology-24042025-v1.owl`
+- `cpThesaurus-24042025-v1.ttl`
+- `CP Release Notes v1.0.pdf`
+
+These files together provide example credential payloads plus supporting semantic assets.
+
+## Common structure
+
+The example credentials share a common Verifiable Credential structure, including:
+
+- `@context`
+- `id`
+- `type`
+- `issuer`
+- `issuanceDate`
+- `credentialSubject`
+
+The JSON examples use the W3C Verifiable Credentials context and the Company Passport ontology context.
+
+## Credential types
+
+### KVK Registration
+
+Represents legal person registration data issued by the Dutch Chamber of Commerce.
+
+Typical fields shown in the example include:
+
+- legal person name
+- EUID
+- legal form type
+- legal representatives
+- intermediate organizations
+- UBO-related ownership percentages
+
+### Tax ID Credential
+
+Represents tax-related registration data issued by the Belastingdienst.
+
+Typical fields shown in the example include:
+
+- legal person name
+- EUID
+- legal form type
+- VAT number
+- tax number
+
+### Bank Account Credential
+
+Represents bank account information issued by a financial institution.
+
+Typical fields shown in the example include:
+
+- legal person name
+- EUID
+- legal form type
+- IBAN
+
+### Deed of Incorporation Credential
+
+Represents incorporation data issued by a notary.
+
+Typical fields shown in the example include:
+
+- legal person name
+- legal form type
+- purpose
+- origin of resources
+- equity origin amount
+- legal representatives
+- intermediate organizations
+- registered location
+
+### UBO Credential
+
+Represents Ultimate Beneficial Owner related ownership information.
+
+Typical fields shown in the example include:
+
+- legal person name
+- EUID
+- legal form type
+- direct ownership percentages
+- nested intermediate organizations
+- legal representatives with UBO details
+
+## Semantic assets
+
+In addition to the credential examples, the taxonomy release contains:
+
+- an ontology file: `cpOntology-24042025-v1.owl`
+- a thesaurus file: `cpThesaurus-24042025-v1.ttl`
+
+These assets can be used to provide shared semantics and a controlled vocabulary for Company Passport data elements.
+
+## Notes
+
+The JSON files in this release appear to function primarily as example credential payloads for the first release of the taxonomy.
+
+As the Company Passport specifications evolve, this page can be extended with:
+
+- formal field definitions
+- cardinality and datatype rules
+- issuer-specific constraints
+- mappings to technical specifications
+- references to trust framework requirements
