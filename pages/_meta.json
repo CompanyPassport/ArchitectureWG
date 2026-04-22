@@ -14,6 +14,14 @@
     "title": "Technical Specifications",
     "type": "page"
   },
+
+  "taxonomy": {
+
+    "title": "Taxonomy",
+
+    "type": "page"
+
+  },
   "glossary": {
     "title": "Glossary",
     "type": "page"
