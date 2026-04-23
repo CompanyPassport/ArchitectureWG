@@ -6,6 +6,12 @@ type Props = {
   height?: number
 }
 
+function withBasePath(path: string) {
+  const basePath =
+    process.env.NODE_ENV === 'production' ? '/ArchitectureWG' : ''
+  return `${basePath}${path}`
+}
+
 export default function FileTextPreview({
   src,
   language = 'text',
@@ -16,11 +22,12 @@ export default function FileTextPreview({
 
   useEffect(() => {
     let cancelled = false
+    const resolvedSrc = withBasePath(src)
 
-    fetch(src)
+    fetch(resolvedSrc)
       .then(async (res) => {
         if (!res.ok) {
-          throw new Error(`Failed to load ${src}: ${res.status}`)
+          throw new Error(`Failed to load ${resolvedSrc}: ${res.status}`)
         }
         return res.text()
       })
@@ -51,7 +58,7 @@ export default function FileTextPreview({
         <strong>Preview unavailable</strong>
         <div style={{ marginTop: '8px' }}>{error}</div>
         <div style={{ marginTop: '8px' }}>
-          <a href={src} target="_blank" rel="noreferrer">
+          <a href={withBasePath(src)} target="_blank" rel="noreferrer">
             Open source file
           </a>
         </div>
