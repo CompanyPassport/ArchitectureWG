@@ -86,10 +86,21 @@ export default function FileTextPreview({
         return res.text()
       })
       .then((text) => {
-        if (!cancelled) {
-          setContent(text)
+        if (cancelled) return
+      
+        // Pretty-print JSON
+        if (language === 'json') {
+          try {
+            const parsed = JSON.parse(text)
+            text = JSON.stringify(parsed, null, 2) // 2 = nice indentation
+          } catch {
+            // fallback if invalid JSON
+          }
         }
+      
+        setContent(text)
       })
+      
       .catch((err) => {
         if (!cancelled) {
           setError(err instanceof Error ? err.message : 'Unknown error')
