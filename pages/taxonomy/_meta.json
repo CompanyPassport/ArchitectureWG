@@ -4,7 +4,7 @@
   "deed-of-incorporation-credential": "Deed of Incorporation Credential",
   "kvk-registration": "KVK Registration",
   "tax-id-credential": "Tax ID Credential",
-  "ubo": "UBO Credential",
+  "ubo-credential": "UBO Credential",
   "ontology": "Ontology (.owl)",
   "thesaurus": "Thesaurus (.ttl)",
   "release-notes": "Release Notes (.pdf)"
