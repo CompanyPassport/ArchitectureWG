@@ -11,6 +11,7 @@ type Props = {
 function withBasePath(path: string) {
   const basePath =
     process.env.NODE_ENV === 'production' ? '/ArchitectureWG' : ''
+
   return `${basePath}${path}`
 }
 
@@ -31,10 +32,13 @@ export default function FileTextPreview({
         if (!res.ok) {
           throw new Error(`Failed to load ${resolvedSrc}: ${res.status}`)
         }
+
         return res.text()
       })
       .then((text) => {
-        if (!cancelled) setContent(text)
+        if (!cancelled) {
+          setContent(text)
+        }
       })
       .catch((err) => {
         if (!cancelled) {
@@ -78,7 +82,7 @@ export default function FileTextPreview({
         background: '#0b1020'
       }}
     >
-      <pre style={{ margin: 0, padding: '16px' }}>
+      <pre style={{ margin: 0, padding: '16px', color: '#f8fafc' }}>
         <code className={`language-${language}`}>{content}</code>
       </pre>
     </div>
